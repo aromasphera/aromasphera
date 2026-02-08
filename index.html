@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сухой туман для авто | Нижневартовск | AROMASPHERA</title>
+    
+    <meta name="description" content="Сухой туман для автомобилей в Нижневартовске. Уничтожение запахов табака, животных, плесени навсегда. Видео процесса. Цены от 700 рублей.">
+    <meta name="keywords" content="сухой туман, удаление запахов, обработка авто, Нижневартовск, чистка салона, дезинфекция">
+    <meta name="author" content="AROMASPHERA">
+    
+    <meta property="og:title" content="Сухой туман для авто | Уничтожим запахи навсегда!">
+    <meta property="og:description" content="Профессиональная обработка автомобилей сухим туманом. Видео процесса работы.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>">
+    
+    <style>
+        :root {
+            --primary: #ff4757;
+            --secondary: #1a1a1a;
+            --accent: #00d2d3;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --gray: #666;
+            --light-gray: #aaa;
+            --light: #f8f9fa;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --glow: 0 0 20px rgba(255, 71, 87, 0.3);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            color: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(255, 71, 87, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 210, 211, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(255, 71, 87, 0.03) 0%, transparent 60%);
+            z-index: -3;
+            animation: pulse 15s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .fog {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(180deg, transparent 50%, rgba(255, 255, 255, 0.02) 70%, transparent 90%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><filter id="f"><feTurbulence baseFrequency="0.015" numOctaves="4" /><feDisplacementMap in="SourceGraphic" scale="10"/></filter><rect width="100" height="100" filter="url(%23f)" opacity="0.08"/></svg>');
+            animation: fogMove 25s infinite linear;
+            pointer-events: none;
+            z-index: -2;
+            opacity: 0.4;
+        }
+        
+        @keyframes fogMove {
+            0% { transform: translateY(0) translateX(0); }
+            100% { transform: translateY(-100px) translateX(50px); }
+        }
+        
+        header {
+            text-align: center;
+            padding: clamp(3rem, 5vw, 4rem) 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--glow);
+            animation: float 3s ease-in-out infinite;
+            letter-spacing: 1px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(45deg, var(--light), #ff6b6b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 5px 20px rgba(255, 71, 87, 0.2);
+        }
+        
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: var(--light-gray);
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .counter-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            animation: slideInRight 0.8s ease-out 0.5s both;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .counter-box {
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(20, 20, 20, 0.95));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            min-width: 160px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .counter-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+        }
+        
+        .counter-box:hover::before {
+            animation: shimmer 1.5s infinite;
+        }
+        
+        .counter-box:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 
+                0 20px 50px rgba(255, 71, 87, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 71, 87, 0.3);
+        }
+        
+        .counter-label {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-bottom: 0.3rem;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .counter-value {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 0.3rem;
+            display: block;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .counter-subtext {
+            font-size: 0.65rem;
+            opacity: 0.5;
+            display: block;
+            letter-spacing: 0.5px;
+        }
+        
+        .counter-icon {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+        
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section {
+            background: rgba(15, 15, 15, 0.7);
+            padding: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+        
+        section:hover::before {
+            transform: scaleX(1);
+        }
+        
+        section:hover {
+            border-color: rgba(255, 71, 87, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 71, 87, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+            animation: lineGrow 1s ease-out;
+        }
+        
+        @keyframes lineGrow {
+            from { width: 0; }
+            to { width: 80px; }
+        }
+        
+        .video-section {
+            text-align: center;
+        }
+        
+        .video-title {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            margin-bottom: 0.5rem;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .video-subtitle {
+            font-size: 1.1rem;
+            color: var(--light-gray);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 1.5rem auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 14px;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            width: 90%;
+            max-width: 500px;
+        }
+        
+        .video-overlay.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .video-text-container {
+            padding: 1rem;
+        }
+        
+        .video-overlay-text {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        
+        .video-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, 
+                rgba(30, 30, 30, 0.7) 0%, 
+                rgba(20, 20, 20, 0.7) 100%);
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 71, 87, 0.05), transparent);
+            transform: translateX(-100%);
+        }
+        
+        .benefit-card:hover::before {
+            animation: shimmer 1s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 71, 87, 0.3);
+            box-shadow: 
+                0 15px 30px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 71, 87, 0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, 
+                rgba(25, 25, 25, 0.8) 0%, 
+                rgba(15, 15, 15, 0.8) 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+        
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 71, 87, 0.2);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 71, 87, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 5px 15px rgba(255, 71, 87, 0.3));
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            min-height: 3rem;
+        }
+        
+        .service-card p {
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .service-price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin: 1rem 0;
+            text-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .service-price::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        
+        .service-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent), #00b5b6);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 210, 211, 0.3);
+        }
+        
+        .phone-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: auto;
+            padding: 0.9rem 1.8rem;
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: var(--transition);
+            box-shadow: 
+                0 8px 25px rgba(255, 71, 87, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            font-size: 0.9rem;
+        }
+        
+        .phone-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+        }
+        
+        .phone-link:hover::before {
+            animation: shimmer 1s;
+        }
+        
+        .phone-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 15px 35px rgba(255, 71, 87, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .price-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 1100px) {
+            .price-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .price-card {
+            background: linear-gradient(135deg, 
+                rgba(20, 20, 20, 0.8) 0%, 
+                rgba(10, 10, 10, 0.8) 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 71, 87, 0.03), transparent);
+        }
+        
+        .price-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .price-header i {
+            font-size: 2rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .price-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 1.5rem 0;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            transition: var(--transition);
+        }
+        
+        .price-image-wrapper:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255, 71, 87, 0.3);
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 71, 87, 0.2);
+        }
+        
+        .price-image-wrapper:hover img {
+            transform: scale(1.02);
+        }
+        
+        .price-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .discounts {
+            background: linear-gradient(135deg, 
+                rgba(30, 30, 30, 0.8) 0%, 
+                rgba(20, 20, 20, 0.8) 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            border-left: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .discounts::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(0, 210, 211, 0.05), transparent);
+        }
+        
+        .discount-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .discount-item {
+            background: rgba(15, 15, 15, 0.7);
+            padding: 1.5rem;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .discount-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 210, 211, 0.3);
+            box-shadow: 
+                0 15px 30px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(0, 210, 211, 0.1);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, 
+                rgba(25, 25, 25, 0.8) 0%, 
+                rgba(15, 15, 15, 0.8) 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 71, 87, 0.03), transparent);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 71, 87, 0.2);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 71, 87, 0.1);
+        }
+        
+        .contact-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 5px 15px rgba(255, 71, 87, 0.3));
+        }
+        
+        .contact-form {
+            max-width: 700px;
+            margin: 2.5rem auto 0;
+            background: linear-gradient(135deg, 
+                rgba(20, 20, 20, 0.8) 0%, 
+                rgba(10, 10, 10, 0.8) 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 71, 87, 0.03), transparent);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-control {
+            padding: 1rem 1.2rem;
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: white;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 
+                0 0 0 3px rgba(255, 71, 87, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            background: rgba(40, 40, 40, 0.8);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1.1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 
+                0 8px 25px rgba(255, 71, 87, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+            margin-top: 2rem;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+        }
+        
+        .submit-btn:hover::before {
+            animation: shimmer 1s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 15px 35px rgba(255, 71, 87, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+            background: linear-gradient(135deg, 
+                rgba(15, 15, 15, 0.9) 0%, 
+                rgba(5, 5, 5, 0.9) 100%);
+            border-radius: 20px;
+            border-top: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 71, 87, 0.03), transparent);
+        }
+        
+        .logo {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            display: inline-block;
+            text-shadow: 0 5px 15px rgba(255, 71, 87, 0.2);
+            letter-spacing: 1px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, 
+                rgba(30, 30, 30, 0.8) 0%, 
+                rgba(20, 20, 20, 0.8) 100%);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+        }
+        
+        .social-link:hover::before {
+            animation: shimmer 1s;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 10px 25px rgba(255, 71, 87, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .website-block {
+            background: linear-gradient(135deg, 
+                rgba(25, 25, 25, 0.9) 0%, 
+                rgba(15, 15, 15, 0.9) 100%);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .website-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(0, 210, 211, 0.03), transparent);
+        }
+        
+        .website-block:hover {
+            transform: translateY(-3px);
+            border-color: rgba(0, 210, 211, 0.2);
+            box-shadow: 
+                0 15px 30px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(0, 210, 211, 0.1);
+        }
+        
+        .website-block h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--light);
+        }
+        
+        .website-block p {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .website-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.6rem 1.5rem;
+            background: linear-gradient(135deg, #0088cc, #00aced);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .website-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+        }
+        
+        .website-link:hover::before {
+            animation: shimmer 1s;
+        }
+        
+        .website-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 136, 204, 0.4);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 5, 5, 0.98);
+            z-index: 10000;
+            animation: fadeIn 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 16px;
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.9),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .close-modal:hover {
+            color: var(--primary);
+            background: rgba(255, 71, 87, 0.2);
+            transform: rotate(90deg) scale(1.1);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                       transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .fade-in.delay-1 { transition-delay: 0.1s; }
+        .fade-in.delay-2 { transition-delay: 0.2s; }
+        .fade-in.delay-3 { transition-delay: 0.3s; }
+        .fade-in.delay-4 { transition-delay: 0.4s; }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 2rem 1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .price-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid,
+            .services-grid,
+            .video-benefits,
+            .discount-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+                margin-top: 1.5rem;
+            }
+            
+            .video-overlay {
+                display: none;
+            }
+            
+            .counter-widget {
+                bottom: 15px;
+                right: 15px;
+                left: 15px;
+            }
+            
+            .counter-box {
+                margin: 0 auto;
+                max-width: 280px;
+                padding: 0.8rem 1.2rem;
+            }
+            
+            .counter-value {
+                font-size: 1.5rem;
+            }
+            
+            .service-card,
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .discounts {
+                padding: 1.5rem;
+            }
+            
+            footer {
+                padding: 2rem 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .website-block {
+                padding: 1.2rem;
+                margin: 1.5rem auto;
+            }
+            
+            .submit-btn {
+                margin-top: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .logo-badge {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .video-title {
+                font-size: 1.1rem;
+            }
+            
+            .video-subtitle {
+                font-size: 1rem;
+            }
+            
+            .service-price {
+                font-size: 1.8rem;
+            }
+            
+            .phone-link {
+                padding: 0.8rem 1.5rem;
+            }
+            
+            .social-link {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .website-block h3 {
+                font-size: 1.1rem;
+            }
+            
+            .website-block p {
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .video-container:hover .video-overlay {
+                opacity: 0.8;
+            }
+        }
+        
+        .counter-widget.hidden {
+            transform: translateY(150px);
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+        
+        .text-center { text-align: center; }
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mb-3 { margin-bottom: 3rem; }
+        .text-primary { color: var(--primary); }
+        .text-accent { color: var(--accent); }
+        .text-light { color: var(--light); }
+        .text-gray { color: var(--gray); }
+        .font-bold { font-weight: bold; }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="fog"></div>
+    
+    <header>
+        <div class="logo-badge">AROMASPHERA</div>
+        <h1>Сухой туман — уничтожим запахи раз и навсегда!</h1>
+        <p class="subtitle">Профессиональная обработка автомобилей в Нижневартовске. Убираем запахи табака, животных, плесени</p>
+        <div class="logo-badge">
+            <i class="fas fa-tag"></i> Озонация от 690 рублей
+        </div>
+    </header>
+    
+    <main>
+        <section class="video-section fade-in">
+            <h2>Как работает сухой туман?</h2>
+            <p class="video-subtitle">Посмотрите видео о нашей технологии очистки автомобилей</p>
+            
+            <div class="video-container">
+                <video id="mainVideo" controls poster="video-poster.jpg" preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+                <div class="video-overlay" id="videoOverlay">
+                    <div class="video-text-container">
+                        <h3 class="video-title">Уничтожение запахов на молекулярном уровне</h3>
+                        <p class="video-overlay-text">Смотрите процесс работы и результат</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-benefits">
+                <div class="benefit-card fade-in delay-1">
+                    <div class="benefit-icon">
+                        <i class="fas fa-virus-slash"></i>
+                    </div>
+                    <h3>Убивает бактерии</h3>
+                    <p>Уничтожает 99,9% бактерий, вирусов и микробов</p>
+                </div>
+                
+                <div class="benefit-card fade-in delay-2">
+                    <div class="benefit-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Проникает везде</h3>
+                    <p>Достигает самых труднодоступных мест салона</p>
+                </div>
+                
+                <div class="benefit-card fade-in delay-3">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Быстрый результат</h3>
+                    <p>Запахи исчезают сразу после обработки</p>
+                </div>
+                
+                <div class="benefit-card fade-in delay-4">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Безопасно</h3>
+                    <p>Не вредит материалам салона и здоровью</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="fade-in">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in delay-1">
+                    <div class="service-badge">ХИТ ПРОДАЖ</div>
+                    <div class="service-icon">
+                        <i class="fas fa-smog"></i>
+                    </div>
+                    <h3>Сухой туман</h3>
+                    <p>Глубокая обработка салона специальным составом. Проникает во все щели, уничтожает бактерии, вирусы и неприятные запахи.</p>
+                    <div class="service-price">от 700 ₽</div>
+                    <button class="phone-link" onclick="scrollToForm()">
+                        <i class="fas fa-calendar-check"></i> Заказать
+                    </button>
+                </div>
+                
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Озонация</h3>
+                    <p>Обработка озоном для дезинфекции и устранения стойких запахов (табак, плесень, животные).</p>
+                    <div class="service-price">690 ₽</div>
+                    <button class="phone-link" onclick="scrollToForm()">
+                        <i class="fas fa-calendar-check"></i> Заказать
+                    </button>
+                </div>
+                
+                <div class="service-card fade-in delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Комплексная обработка</h3>
+                    <p>Сухой туман + озонация + антибактериальная обработка всех поверхностей салона.</p>
+                    <div class="service-price">от 1 200 ₽</div>
+                    <button class="phone-link" onclick="scrollToForm()">
+                        <i class="fas fa-calendar-check"></i> Заказать
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="fade-in">
+            <h2>Прайс-лист</h2>
+            <p class="text-center text-gray mb-2">Стоимость зависит от типа и размера транспортного средства</p>
+            
+            <div class="price-container">
+                <div class="price-card fade-in delay-1">
+                    <div class="price-header">
+                        <i class="fas fa-car"></i>
+                        <h3>Легковые автомобили</h3>
+                    </div>
+                    <p class="text-gray">Мини, седаны, универсалы, внедорожники</p>
+                    
+                    <div class="price-image-wrapper" onclick="openModal('price.jpg')">
+                        <img src="price.jpg" alt="Прайс-лист на легковые автомобили AROMASPHERA" class="price-image">
+                        <div class="image-overlay">
+                            <span>Кликните для увеличения</span>
+                            <button class="phone-link" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" onclick="downloadImage('price.jpg', 'Прайс-лист-легковые.jpg')">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="price-card fade-in delay-2">
+                    <div class="price-header">
+                        <i class="fas fa-bus"></i>
+                        <h3>Автобусы и фургоны</h3>
+                    </div>
+                    <p class="text-gray">Минивены, микроавтобусы, автобусы, фуры</p>
+                    
+                    <div class="price-image-wrapper" onclick="openModal('pricee.jpg')">
+                        <img src="pricee.jpg" alt="Прайс-лист на автобусы и фургоны AROMASPHERA" class="price-image">
+                        <div class="image-overlay">
+                            <span>Кликните для увеличения</span>
+                            <button class="phone-link" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" onclick="downloadImage('pricee.jpg', 'Прайс-лист-автобусы.jpg')">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="discounts fade-in delay-3">
+                <h3 class="text-center"><i class="fas fa-percentage"></i> Система скидок</h3>
+                <div class="discount-grid">
+                    <div class="discount-item">
+                        <h4>2 авто в одном районе</h4>
+                        <p class="text-primary" style="font-size: 1.3rem; font-weight: bold;">5% скидка</p>
+                    </div>
+                    <div class="discount-item">
+                        <h4>3 авто в одном районе</h4>
+                        <p class="text-primary" style="font-size: 1.3rem; font-weight: bold;">7% скидка</p>
+                    </div>
+                    <div class="discount-item">
+                        <h4>4+ авто в одном районе</h4>
+                        <p class="text-primary" style="font-size: 1.3rem; font-weight: bold;">от 10% скидки</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="fade-in" id="contacts">
+            <h2>Контакты</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card fade-in delay-1">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Телефон</h3>
+                    <p style="font-size: 1.5rem; font-weight: bold;">+7 (913) 858-16-19</p>
+                    <p class="text-gray">Нижневартовск и область</p>
+                    <a href="tel:+79138581619" class="phone-link">
+                        <i class="fas fa-phone"></i> Позвонить
+                    </a>
+                </div>
+                
+                <div class="contact-card fade-in delay-2">
+                    <div class="contact-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram</h3>
+                    <p style="font-size: 1.5rem; font-weight: bold;">@ExclusiveRights</p>
+                    <p class="text-gray">Менеджер для заказов</p>
+                    <a href="https://t.me/ExclusiveRights" target="_blank" class="phone-link" style="background: linear-gradient(135deg, #0088cc, #00aced);">
+                        <i class="fab fa-telegram"></i> Написать
+                    </a>
+                </div>
+                
+                <div class="contact-card fade-in delay-3">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Режим работы</h3>
+                    <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent);">24/7</p>
+                    <p class="text-gray">Ежедневно, выезд на дом или в офис</p>
+                    <button class="phone-link" onclick="scrollToForm()">
+                        <i class="fas fa-calendar-alt"></i> Записаться
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="fade-in" id="form">
+            <h2>Онлайн-заявка</h2>
+            <p class="text-center text-gray mb-2">Заявки приходят сразу на почту aromasphera.nv</p>
+            
+            <div class="contact-form">
+                <form id="orderForm" action="https://formspree.io/f/mwvnkalp" method="POST">
+                    <input type="hidden" name="_subject" value="Новая заявка с сайта AROMASPHERA">
+                    <input type="hidden" name="_replyto" value="aromasphera.nv@gmail.com">
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name" class="text-light mb-1">Ваше имя *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Иван" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="text-light mb-1">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (999) 999-99-99" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="service" class="text-light mb-1">Услуга *</label>
+                            <select id="service" name="service" class="form-control" required>
+                                <option value="" disabled selected>Выберите услугу</option>
+                                <option value="Сухой туман">Сухой туман (от 700 ₽)</option>
+                                <option value="Озонация">Озонация (690 ₽)</option>
+                                <option value="Комплекс">Комплексная обработка</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="carType" class="text-light mb-1">Тип автомобиля</label>
+                            <select id="carType" name="car_type" class="form-control">
+                                <option value="" selected>Не знаю / Другое</option>
+                                <option value="Мини">Мини</option>
+                                <option value="Седан">Седан</option>
+                                <option value="Универсал">Универсал</option>
+                                <option value="Внедорожник">Внедорожник</option>
+                                <option value="Минивен">Минивен</option>
+                                <option value="Микроавтобус">Микроавтобус</option>
+                                <option value="Автобус">Автобус</option>
+                                <option value="Фура">Фура</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="text-light mb-1">Дополнительная информация</label>
+                        <textarea id="message" name="message" class="form-control" rows="3" placeholder="Особые пожелания, адрес, удобное время..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Отправить заявку
+                    </button>
+                    
+                    <p id="formMessage" class="text-center mt-2" style="display: none;"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="fade-in">
+        <div class="logo">AROMASPHERA</div>
+        <p class="text-gray mt-1">Профессиональная обработка автомобилей сухим туманом в Нижневартовске</p>
+        
+        <div class="social-links">
+            <a href="tel:+79138581619" class="social-link" title="Позвонить">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+            <a href="https://t.me/ExclusiveRights" target="_blank" class="social-link" title="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://instagram.com/aromasphera" target="_blank" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" title="WhatsApp" onclick="openWhatsApp()">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        
+        <div class="website-block fade-in delay-2">
+            <h3>Нужен сайт для вашего бизнеса?</h3>
+            <p>Современный адаптивный сайт под ключ. Превратим вашу идею в мощный инструмент для привлечения клиентов.</p>
+            <a href="https://t.me/AxiomFlare" target="_blank" class="website-link">
+                <i class="fab fa-telegram"></i> Написать в Telegram: @AxiomFlare
+            </a>
+        </div>
+        
+        <p class="text-gray mt-2" style="font-size: 0.9rem;">
+            © 2026 AROMASPHERA | Сухой туман для автомобилей<br>
+            Телефон: +7 (913) 858-16-19 | Telegram: @ExclusiveRights
+        </p>
+    </footer>
+    
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Увеличенное изображение прайс-листа">
+    </div>
+    
+    <script>
+        function initCounter() {
+            const today = new Date().toDateString();
+            const seed = today.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+            const count = Math.floor((seed % 10) + 1);
+            
+            const counterElement = document.createElement('div');
+            counterElement.className = 'counter-widget';
+            counterElement.innerHTML = `
+                <div class="counter-box" onclick="scrollToForm()">
+                    <div class="counter-icon"><i class="fas fa-car"></i></div>
+                    <span class="counter-label">Сегодня записалось</span>
+                    <span class="counter-value">${count} авто</span>
+                    <span class="counter-subtext">кликните для записи</span>
+                </div>
+            `;
+            document.body.appendChild(counterElement);
+            
+            let lastScrollTop = 0;
+            const counterWidget = counterElement;
+            
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (window.innerWidth <= 768) {
+                    if (scrollTop > lastScrollTop) {
+                        counterWidget.classList.add('hidden');
+                    } else {
+                        counterWidget.classList.remove('hidden');
+                    }
+                }
+                lastScrollTop = scrollTop;
+            });
+        }
+        
+        const video = document.getElementById('mainVideo');
+        const videoOverlay = document.getElementById('videoOverlay');
+        
+        if (window.innerWidth <= 768) {
+            videoOverlay.style.display = 'none';
+        }
+        
+        video.addEventListener('play', function() {
+            videoOverlay.classList.add('fade-out');
+        });
+        
+        video.addEventListener('pause', function() {
+            videoOverlay.classList.remove('fade-out');
+        });
+        
+        video.addEventListener('ended', function() {
+            setTimeout(() => {
+                videoOverlay.classList.remove('fade-out');
+            }, 2000);
+        });
+        
+        function initScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, entry.target.classList.contains('delay-1') ? 100 : 
+                           entry.target.classList.contains('delay-2') ? 200 :
+                           entry.target.classList.contains('delay-3') ? 300 :
+                           entry.target.classList.contains('delay-4') ? 400 : 0);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elements.forEach(el => observer.observe(el));
+        }
+        
+        function initForm() {
+            const form = document.getElementById('orderForm');
+            const message = document.getElementById('formMessage');
+            
+            form.addEventListener('submit', function(e) {
+                const name = this.querySelector('#name').value;
+                message.textContent = `Спасибо, ${name}! Ваша заявка отправлена. Мы свяжемся с вами в течение 15 минут.`;
+                message.style.display = 'block';
+                message.style.color = '#4cd964';
+                message.style.background = 'rgba(76, 217, 100, 0.1)';
+                message.style.padding = '1rem';
+                message.style.borderRadius = '10px';
+                message.style.border = '1px solid #4cd964';
+            });
+        }
+        
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        function downloadImage(imageSrc, fileName) {
+            const link = document.createElement('a');
+            link.href = imageSrc;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        function scrollToForm() {
+            document.getElementById('form').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        function openWhatsApp() {
+            const message = encodeURIComponent('Здравствуйте! Видел ваш сайт, хочу заказать обработку автомобиля сухим туманом.');
+            const phone = '79138581619';
+            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+        }
+        
+        function initPhoneMask() {
+            const phoneInput = document.getElementById('phone');
+            
+            phoneInput.addEventListener('input', function(e) {
+                let value = this.value.replace(/\D/g, '');
+                
+                if (value.length > 0) {
+                    value = '+7 (' + value;
+                    
+                    if (value.length > 7) {
+                        value = value.slice(0, 7) + ') ' + value.slice(7);
+                    }
+                    if (value.length > 12) {
+                        value = value.slice(0, 12) + '-' + value.slice(12);
+                    }
+                    if (value.length > 15) {
+                        value = value.slice(0, 15) + '-' + value.slice(15);
+                    }
+                    if (value.length > 18) {
+                        value = value.slice(0, 18);
+                    }
+                }
+                
+                this.value = value;
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            initCounter();
+            initScrollAnimations();
+            initForm();
+            initPhoneMask();
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+            
+            document.getElementById('imageModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
