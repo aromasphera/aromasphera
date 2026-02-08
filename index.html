@@ -1289,14 +1289,22 @@
             <p class="video-subtitle">Посмотрите видео о нашей технологии очистки автомобилей</p>
             
             <div class="video-container">
-                <video id="mainVideo" controls poster="video-poster.jpg" preload="metadata">
-                    <source src="video.mp4" type="video/mp4">
-                    Ваш браузер не поддерживает видео.
-                </video>
-                <div class="video-overlay" id="videoOverlay">
-                    <div class="video-text-container">
-                        <h3 class="video-title">Уничтожение запахов на молекулярном уровне</h3>
-                        <p class="video-overlay-text">Смотрите процесс работы и результат</p>
+                <div class="video-container">
+                    <iframe 
+                        src="https://drive.google.com/file/d/1rmcMMO-jlUKLcGZnDSbRM48q9hu8zUfD/preview?autoplay=0&controls=1&modestbranding=1" 
+                        width="100%" 
+                        height="400" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Видео о сухом тумане AROMASPHERA"
+                        loading="lazy">
+                    </iframe>
+                    <div class="video-overlay" id="videoOverlay" style="display: none;">
+                        <div class="video-text-container">
+                            <h3 class="video-title">Уничтожение запахов на молекулярном уровне</h3>
+                            <p class="video-overlay-text">Смотрите процесс работы и результат</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1390,11 +1398,11 @@
                     </div>
                     <p class="text-gray">Мини, седаны, универсалы, внедорожники</p>
                     
-                    <div class="price-image-wrapper" onclick="openModal('price.jpg')">
-                        <img src="price.jpg" alt="Прайс-лист на легковые автомобили AROMASPHERA" class="price-image">
+                    <div class="price-image-wrapper" onclick="openModal('https://github.com/user-attachments/assets/33d07c34-abf8-4d62-aa70-459914583ee6')">
+                        <img src="https://github.com/user-attachments/assets/33d07c34-abf8-4d62-aa70-459914583ee6" alt="Прайс-лист на легковые автомобили AROMASPHERA" class="price-image">
                         <div class="image-overlay">
                             <span>Кликните для увеличения</span>
-                            <button class="phone-link" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" onclick="downloadImage('price.jpg', 'Прайс-лист-легковые.jpg')">
+                            <button class="phone-link" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" onclick="downloadImage('https://github.com/user-attachments/assets/33d07c34-abf8-4d62-aa70-459914583ee6', 'Прайс-лист-легковые.jpg')">
                                 <i class="fas fa-download"></i>
                             </button>
                         </div>
@@ -1408,11 +1416,11 @@
                     </div>
                     <p class="text-gray">Минивены, микроавтобусы, автобусы, фуры</p>
                     
-                    <div class="price-image-wrapper" onclick="openModal('pricee.jpg')">
-                        <img src="pricee.jpg" alt="Прайс-лист на автобусы и фургоны AROMASPHERA" class="price-image">
+                    <div class="price-image-wrapper" onclick="openModal('https://github.com/user-attachments/assets/7564ce2f-fe85-4732-b273-6c809afd6f38')">
+                        <img src="https://github.com/user-attachments/assets/7564ce2f-fe85-4732-b273-6c809afd6f38" alt="Прайс-лист на автобусы и фургоны AROMASPHERA" class="price-image">
                         <div class="image-overlay">
                             <span>Кликните для увеличения</span>
-                            <button class="phone-link" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" onclick="downloadImage('pricee.jpg', 'Прайс-лист-автобусы.jpg')">
+                            <button class="phone-link" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" onclick="downloadImage('https://github.com/user-attachments/assets/7564ce2f-fe85-4732-b273-6c809afd6f38', 'Прайс-лист-автобусы.jpg')">
                                 <i class="fas fa-download"></i>
                             </button>
                         </div>
@@ -1584,9 +1592,11 @@
     
     <script>
         function initCounter() {
-            const today = new Date().toDateString();
-            const seed = today.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-            const count = Math.floor((seed % 10) + 1);
+            const today = new Date().toISOString().split('T')[0];
+            const seed = parseInt(today.replace(/-/g, ''), 10);
+            const count = (seed % 10) + 1;
+            
+            console.log(`🎯 Счётчик на ${today}: ${count} авто`);
             
             const counterElement = document.createElement('div');
             counterElement.className = 'counter-widget';
@@ -1616,27 +1626,6 @@
                 lastScrollTop = scrollTop;
             });
         }
-        
-        const video = document.getElementById('mainVideo');
-        const videoOverlay = document.getElementById('videoOverlay');
-        
-        if (window.innerWidth <= 768) {
-            videoOverlay.style.display = 'none';
-        }
-        
-        video.addEventListener('play', function() {
-            videoOverlay.classList.add('fade-out');
-        });
-        
-        video.addEventListener('pause', function() {
-            videoOverlay.classList.remove('fade-out');
-        });
-        
-        video.addEventListener('ended', function() {
-            setTimeout(() => {
-                videoOverlay.classList.remove('fade-out');
-            }, 2000);
-        });
         
         function initScrollAnimations() {
             const elements = document.querySelectorAll('.fade-in');
@@ -1735,6 +1724,8 @@
         }
         
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚗 AROMASPHERA загружен');
+            
             initCounter();
             initScrollAnimations();
             initForm();
@@ -1766,6 +1757,10 @@
                     }
                 });
             });
+            
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                console.log('📱 Мобильное устройство обнаружено');
+            }
         });
     </script>
 </body>
